@@ -4,7 +4,7 @@ output "Hello_user_"{
 
 output "Repo"{
     value = {
-        for key, value in aws_codecommit_repository.Repos: key => "Clone_url_https: ${value.clone_url_http}"
+        for key, value in aws_codecommit_repository.Repos: key => "Clone_url_https: git clone ${value.clone_url_http}"
     }
 }
 
